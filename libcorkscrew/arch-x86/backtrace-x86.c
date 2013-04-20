@@ -80,6 +80,13 @@ typedef struct ucontext {
 
 #endif /* __ BIONIC__ */
 
+enum {
+  REG_GS = 0, REG_FS, REG_ES, REG_DS,
+  REG_EDI, REG_ESI, REG_EBP, REG_ESP,
+  REG_EBX, REG_EDX, REG_ECX, REG_EAX,
+  REG_TRAPNO, REG_ERR, REG_EIP, REG_CS,
+  REG_EFL, REG_UESP, REG_SS
+};
 /* Unwind state. */
 typedef struct {
     uint32_t ebp;
